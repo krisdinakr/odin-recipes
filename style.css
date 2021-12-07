@@ -13,18 +13,20 @@ body {
   background-position: 0 0,32px 32px;
 }
 
-.home-page__title {
+.home-page__title,
+.recipe-page__title {
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
   background-color: #FC997C;
-  margin: 1rem 4rem;
   color: #ffffff;
-  height: 5rem;
-  line-height: 5rem;
   text-align: center;
   border-radius: 10px;
 }
 
 .home-page__wrapper {
-  margin: 4rem 4rem;
+  width: 80%;
+  margin: 4rem auto;
   display: flex;
   justify-content: space-evenly;
   list-style: none;
@@ -58,40 +60,27 @@ figure {
   font-weight: bold;
   background-color: #FC997C;
   width: 100%;
-  height: 3rem;
+  padding: 1rem 0;
   margin-top: 1rem;
-  line-height: 3rem;
   border-radius: 10px;
   text-align: center;
   letter-spacing: 0.8px;
 }
 
-.home-page__link:hover,
-.recipe-page__link:hover {
+.home-page__link:hover {
   color: #FFE6BC;
   background-color: #DD4A48;
 }
 
-.recipe-page__title {
-  background-color: #FC997C;
-  margin: 1rem 4rem;
-  color: #ffffff;
-  height: 5rem;
-  line-height: 5rem;
-  text-align: center;
-  border-radius: 10px;
-}
 
 .recipe-page__link {
-  display: block;
-  margin-bottom: 1rem;
+  color: #FFE6BC;
   text-decoration: none;
-  color: #ffffff;
-  background-color: #FC997C;
-  padding: .5rem;
-  width: 8.5rem;
-  text-align: center;
-  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.recipe-page__link:hover {
+  color: #2B2B2B;
 }
 
 section {
@@ -137,4 +126,41 @@ section {
 .recipe-page__list > li {
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-page__wrapper {
+    flex-direction: column;
+  }
+  
+  .home-page__links {
+    margin-bottom: 2rem;
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+  }
+
+  section {
+    margin: 1.5rem;
+  }
+
+  .recipe-page__img-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .recipe-page__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .recipe-page__content {
+    margin: 0;
+    padding: 2rem 2.5rem;
+  }
 }
